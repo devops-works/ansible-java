@@ -1,1 +1,2 @@
-- include: java.yml tags=java
+- include: java.yml
+  tags: ["java"]
