@@ -1,2 +1,7 @@
+__pycache__
+*.log
+*.pyc
+.ropeproject
+.tags
 .vagrant
 tests/ansible-java/playbooks

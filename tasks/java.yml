@@ -1,5 +1,8 @@
+---
 - name: Adds repository
-  apt_repository: repo='ppa:webupd8team/java' update_cache=yes
+  apt_repository:
+    repo: 'ppa:webupd8team/java'
+    update_cache: true
 
 - name: Auto accept licence
   debconf:
@@ -9,7 +12,9 @@
     value: 'true'
 
 - name: Installs latest java
-  apt: pkg={{ item }} state=latest
+  apt:
+    pkg: "{{ item }}"
+    state: present
   with_items:
     - ca-certificates
     - oracle-java8-installer
