@@ -1,20 +1,19 @@
 ---
 - name: Adds repository
   apt_repository:
-    repo: 'ppa:webupd8team/java'
+    repo: 'ppa:linuxuprising/java'
     update_cache: true
 
 - name: Auto accept licence
   debconf:
-    name: oracle-java8-installer
-    question: shared/accepted-oracle-license-v1-1
+    name: oracle-java14-installer
+    question: shared/accepted-oracle-license-v1-2
     vtype: boolean
     value: 'true'
 
 - name: Installs latest java
   apt:
-    pkg: "{{ item }}"
+    pkg:
+      - ca-certificates
+      - oracle-java14-installer
     state: present
-  with_items:
-    - ca-certificates
-    - oracle-java8-installer

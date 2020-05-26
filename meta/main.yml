@@ -5,7 +5,7 @@ dependencies: []
 galaxy_info:
   author: Michel Blanc
   company: devops.works
-  description: Oracle java8 role
+  description: Oracle java14 role
   license: MIT
   min_ansible_version: 1.6
   platforms:
