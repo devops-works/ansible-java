@@ -5,3 +5,4 @@ __pycache__
 .tags
 .vagrant
 tests/ansible-java/playbooks
+.vscode/
