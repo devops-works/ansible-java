@@ -65,9 +65,9 @@ function install() {
 
   # Install Git
   if [[ -r "/etc/redhat-release" ]]; then
-    sudo yum install -y git
+    sudo yum install -y git python-minimal make
   else
-    sudo apt-get install -y git
+    sudo apt-get update && sudp apt-get install -y git python-minimal make
   fi
 
   # Fetch and install rolespec
