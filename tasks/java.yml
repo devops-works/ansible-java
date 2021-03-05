@@ -6,7 +6,7 @@
 
 - name: Auto accept licence
   debconf:
-    name: oracle-java14-installer
+    name: "{{ java_pkg_name }}"
     question: shared/accepted-oracle-license-v1-2
     vtype: boolean
     value: 'true'
@@ -15,5 +15,5 @@
   apt:
     pkg:
       - ca-certificates
-      - oracle-java14-installer
+      - "{{ java_pkg_name }}"
     state: present
